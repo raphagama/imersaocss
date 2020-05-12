@@ -1,0 +1,39 @@
+body {
+    background-image: url("https://images-americanas.b2w.io/produtos/01/00/image/80955/0/80955069_1GG.jpg");
+    background-size: 130vh;
+    background-repeat: no-repeat;
+    font-family: Verdana;
+    height: 100vh;
+  }
+  
+  .menu{
+    background-color: white;
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li{
+    list-style: none;
+  }
+  
+  .site-subtitle,
+  .site-title {
+    color: gray;
+    text-align: center;
+  }
+  
+  .site-subtitle{
+    font-style: italic;
+  }
