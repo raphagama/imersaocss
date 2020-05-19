@@ -63,11 +63,64 @@ a:hover{
   text-align: center;
 }
 
-.site-subtitle{
-  font-style: italic;
+.site-title{
+  font-size: 4em;
+  font-family: 'Montserrat', sans-serif;
 }
+
+.site-subtitle{
+  /* font-style: italic; */
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8em;
+}
+
+.projetos{
+  padding: 2em;
+  height: 100vh;
+}
+
+.projetos h2 {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+.projetos figure{
+  text-align: center;
+}
+
+.projetos .grid{
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px){
+  .projetos .grid{
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+/* @media (min-width: 880px){
+  .projetos .grid{
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+} */
+
+@media (min-width: 1120px){
+  .projetos .grid{
+    grid-template-columns: repeat(4, 240px);
+    align-content: center;
+    justify-content: center;
+  }
+}
+
 
 .img-portfolio {
   height: 180px;
   width: 180px;
+  object-fit: cover;
 }
