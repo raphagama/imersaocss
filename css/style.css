@@ -8,7 +8,7 @@
 body {
     background-image: url("../img/fundo.jpg");
     background-size: 230vh;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-family: Verdana;
     height: 100vh;
 }
@@ -32,11 +32,19 @@ header{
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index:1;
 }
 
 .menu a {
   display: block;
   padding: 10px 20px;
+  transition: background-color 1ms, color 1ms;
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color: teal;
+  color: whitesmoke;
 }
 
 a {
@@ -74,15 +82,35 @@ a:hover{
   line-height: 1.8em;
 }
 
+.sobre,
+.contato,
 .projetos{
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.sobre,
+.contato h2,
 .projetos h2 {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 0.5em;
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+.sobre p{
+  color: whitesmoke;
+  margin-bottom: 1em;
+  text-indent: 4em;
+}
+
+.sobre .avatar{
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.sobre .avatar img{
+  border-radius: 80%;
 }
 
 .projetos figure{
@@ -101,14 +129,6 @@ a:hover{
   }
 }
 
-/* @media (min-width: 880px){
-  .projetos .grid{
-    grid-template-columns: repeat(3, 240px);
-    align-content: center;
-    justify-content: center;
-    height: calc(100vh - 8em - 48px);
-  }
-} */
 
 @media (min-width: 1120px){
   .projetos .grid{
@@ -123,4 +143,25 @@ a:hover{
   height: 180px;
   width: 180px;
   object-fit: cover;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a{
+  color: whitesmoke;
+  font-size: 6em;
+  transition: text-decoration 500ms, text-shadow 500ms;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 10px 10px 10px black;
 }
